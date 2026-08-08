@@ -188,6 +188,7 @@ function buildMuscleScore(
     sto2: Math.round(data.optical.stO2),
     hbt: Math.round(data.optical.hbT),
     tskin: Math.round(data.thermal.tSkin),
+    hfr: Math.round(Math.max(20, 100 - data.mechanical.lfr * 1.2 + data.thermal.q * 0.05)),
     lfr: Math.round(data.mechanical.lfr),
     sr: Math.round(data.mechanical.sr),
     frt90: Math.round(data.mechanical.frt90),
