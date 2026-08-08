@@ -1,0 +1,21 @@
+.DS_Store
+node_modules/
+dist/
+build/
+.next/
+out/
+.expo/
+.pnpm-store/
+*.log
+.env
+.env.*.local
+
+# Large binary assets (models stay local, not in repo)
+*.glb
+*.gltf
+*.obj
+*.fbx
+*.blend
+*.usdz
+public/models/
+models/

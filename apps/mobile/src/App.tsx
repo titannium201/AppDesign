@@ -9,16 +9,14 @@ import { Text } from 'react-native';
 import type { RootStackParamList, MainTabParamList } from '@app/shared';
 import { COLORS } from '@app/shared';
 
-import { WelcomeScreen } from './src/screens/WelcomeScreen';
-import { LoginScreen } from './src/screens/LoginScreen';
-import { ProfileFormScreen } from './src/screens/ProfileFormScreen';
-import { HomeScreen } from './src/screens/HomeScreen';
-import { HistoryScreen } from './src/screens/HistoryScreen';
-import { ProfileScreen } from './src/screens/ProfileScreen';
-import { ScanSelectScreen } from './src/screens/ScanSelectScreen';
-import { ScanPrepareScreen } from './src/screens/ScanPrepareScreen';
-import { ScanningScreen } from './src/screens/ScanningScreen';
-import { ScanReportScreen } from './src/screens/ScanReportScreen';
+import { WelcomeScreen } from './screens/WelcomeScreen';
+import { LoginScreen } from './screens/LoginScreen';
+import { ProfileFormScreen } from './screens/ProfileFormScreen';
+import { HomeScreen } from './screens/HomeScreen';
+import { ScanSelectScreen } from './screens/ScanSelectScreen';
+import { ScanPrepareScreen } from './screens/ScanPrepareScreen';
+import { ScanningScreen } from './screens/ScanningScreen';
+import { ScanReportScreen } from './screens/ScanReportScreen';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const MainTab = createBottomTabNavigator<MainTabParamList>();
@@ -49,15 +47,23 @@ function MainTabs() {
       />
       <MainTab.Screen
         name="History"
-        component={HistoryScreen}
+        component={PlaceholderScreen}
         options={{ tabBarLabel: '记录', tabBarIcon: () => <Text>📊</Text> }}
       />
       <MainTab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={PlaceholderScreen}
         options={{ tabBarLabel: '我的', tabBarIcon: () => <Text>👤</Text> }}
       />
     </MainTab.Navigator>
+  );
+}
+
+function PlaceholderScreen() {
+  return (
+    <SafeAreaProvider>
+      <></>
+    </SafeAreaProvider>
   );
 }
 

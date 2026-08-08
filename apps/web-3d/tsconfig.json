@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/shared": ["../../packages/shared/src"],
+      "@app/muscle-3d": ["../../packages/muscle-3d/src"]
+    }
+  },
+  "include": ["src/**/*", "index.html"],
+  "exclude": ["node_modules", "dist", "build"]
+}
