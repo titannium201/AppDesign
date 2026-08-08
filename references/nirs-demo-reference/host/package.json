@@ -1,0 +1,8 @@
+{
+  "name": "dual-max30102-nirs-host",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test protocol.test.js"
+  }
+}

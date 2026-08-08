@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f0e9" />
+    <title>Dual MAX30102 Muscle NIRS Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><i></i><i></i></div>
+          <div>
+            <p class="eyebrow">NIRS / DUAL MAX30102 / PROTOTYPE 01</p>
+            <h1>肌肉近红外趋势实验台</h1>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="connection-pill" id="connectionPill" data-state="idle">
+            <span></span><b id="connectionText">未连接</b>
+          </div>
+          <button class="button ghost" id="demoButton" type="button">演示模式</button>
+          <button class="button dark" id="connectButton" type="button">连接 XIAO</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="hero-index">04 / OPTICAL SENSING</p>
+          <h2>一端发光，<br /><em>一端读肌肉。</em></h2>
+          <p class="hero-copy">
+            上方 MAX30102 提供 660 nm 红光与约 880 nm 红外光，并作为短距参考；
+            下方 MAX30102 关闭自身 LED，读取长距透射/漫反射信号。
+          </p>
+        </div>
+        <div class="probe-diagram" aria-label="双模块光路示意">
+          <div class="probe source-probe"><span>S</span><b>光源 / 短距</b><small>D4 · D5</small></div>
+          <div class="tissue-path"><i></i><i></i><i></i><span id="distanceLabel">30 mm</span></div>
+          <div class="probe detector-probe"><span>D</span><b>长距接收</b><small>D2 · D3</small></div>
+        </div>
+      </section>
+
+      <section class="warning-strip">
+        <strong>研究原型</strong>
+        <p>血红蛋白指标为基线相对估算；SmO₂ 为参考值锚定的低置信度实验推算，不是绝对测量。不可用于诊断或治疗。</p>
+      </section>
+
+      <section class="metric-grid" aria-label="NIRS 指标">
+        <article class="metric primary-metric">
+          <p>SmO₂ · 局部肌肉氧饱和度</p>
+          <div><strong id="smo2Estimate">--</strong><span>%</span></div>
+          <small id="smo2Confidence">完成基线后实验推算 · 置信度 0%</small>
+        </article>
+        <article class="metric">
+          <p>ΔO₂Hb · 氧合血红蛋白变化</p>
+          <div><strong id="oxygenatedHb">--</strong><span>mOD-eq</span></div>
+          <small id="oxygenatedHbConfidence">相对估算 · 置信度 0%</small>
+        </article>
+        <article class="metric">
+          <p>ΔHHb · 脱氧血红蛋白变化</p>
+          <div><strong id="deoxygenatedHb">--</strong><span>mOD-eq</span></div>
+          <small id="deoxygenatedHbConfidence">相对估算 · 置信度 0%</small>
+        </article>
+        <article class="metric">
+          <p>ΔtHb · 总血红蛋白变化</p>
+          <div><strong id="bloodVolume">--</strong><span>mOD-eq</span></div>
+          <small id="totalHbConfidence">相对估算 · 置信度 0%</small>
+        </article>
+        <article class="metric">
+          <p>HbDiff · O₂Hb − HHb</p>
+          <div><strong id="oxygenation">--</strong><span>mOD-eq</span></div>
+          <small id="hbDiffConfidence">相对估算 · 置信度 0%</small>
+        </article>
+        <article class="metric">
+          <p>实时测量质量</p>
+          <div><strong id="linkQuality">0</strong><span>%</span></div>
+          <div class="quality-bar"><i id="qualityFill"></i></div>
+          <small><span id="temperature">--</span> °C · <span id="syncStatus">等待双模块握手</span></small>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-code">RELATIVE OPTICAL DENSITY</p>
+              <h3>肌肉氧合趋势</h3>
+            </div>
+            <div class="legend">
+              <span><i class="line oxygen-line"></i>HbDiff</span>
+              <span><i class="line volume-line"></i>ΔtHb</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="trendChart" aria-label="NIRS 相对趋势图"></canvas>
+            <div class="chart-empty" id="chartEmpty">连接设备并完成基线校准</div>
+          </div>
+          <div class="chart-footer">
+            <span><i class="live-dot"></i><b id="sampleRate">--</b> SPS</span>
+            <span>窗口 <b>60 s</b></span>
+            <span>样本 <b id="sampleCount">0</b></span>
+          </div>
+        </article>
+
+        <aside class="controls">
+          <article class="panel diagnostic-panel">
+            <div class="panel-heading compact">
+              <div><p class="panel-code">OPTICAL LINK TEST</p><h3>自动光路验证</h3></div>
+              <span class="state-label" id="diagnosticState">未测试</span>
+            </div>
+            <p id="diagnosticCopy">
+              自动采集暗场，扫描完整 10 ms 周期的 41 个同步偏移，再验证红光和红外是否都到达接收模块。
+            </p>
+            <div class="diagnostic-progress" aria-hidden="true"><i id="diagnosticProgress"></i></div>
+            <div class="diagnostic-result" id="diagnosticResult" hidden>
+              <span>RED <b id="redLinkResult">--</b></span>
+              <span>IR <b id="irLinkResult">--</b></span>
+              <span>最佳偏移 <b id="bestOffsetResult">--</b></span>
+            </div>
+            <button class="button dark full" id="diagnosticButton" type="button" disabled>
+              开始自动验证
+            </button>
+          </article>
+
+          <article class="panel calibration-panel">
+            <div class="panel-heading compact">
+              <div><p class="panel-code">ZERO REFERENCE</p><h3>基线校准</h3></div>
+              <span class="state-label" id="baselineState">未校准</span>
+            </div>
+            <p>探头固定在放松肌肉上，遮光并保持不动至少 3 秒，再记录当前光密度。</p>
+            <button class="button accent full" id="calibrateButton" type="button" disabled>
+              记录当前基线
+            </button>
+          </article>
+
+          <article class="panel setup-panel">
+            <div class="panel-heading compact">
+              <div><p class="panel-code">PROBE CONTROL</p><h3>探头设置</h3></div>
+            </div>
+            <label>
+              <span>源-探测间距</span>
+              <div><input id="distanceInput" type="number" value="30" min="10" max="50" step="1" /><b>mm</b></div>
+            </label>
+            <label>
+              <span>LED 电流寄存器</span>
+              <div><input id="ledInput" type="number" value="220" min="1" max="220" step="1" /><b>1–220</b></div>
+            </label>
+            <label>
+              <span>SmO₂ 基线参考（实验）</span>
+              <div><input id="smo2ReferenceInput" type="number" value="70" min="30" max="95" step="1" /><b>%</b></div>
+            </label>
+            <label>
+              <span>光学滤波</span>
+              <div>
+                <select id="filterSelect">
+                  <option value="1" selected>强平滑 · 1 Hz（推荐静止测试）</option>
+                  <option value="2">稳定 · 2 Hz</option>
+                  <option value="4">快速 · 4 Hz</option>
+                </select>
+                <b>中值 + 低通</b>
+              </div>
+            </label>
+            <label>
+              <span>启动相位偏移</span>
+              <div><input id="offsetInput" type="number" value="0" min="-5000" max="5000" step="25" /><b>µs</b></div>
+            </label>
+            <div class="setup-actions">
+              <button class="button ghost" id="applyButton" type="button" disabled>应用</button>
+              <button class="button ghost" id="boostButton" type="button" disabled>增强功率</button>
+              <button class="button ghost" id="syncButton" type="button" disabled>重新同步</button>
+            </div>
+          </article>
+        </aside>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel muscle-state-panel" id="muscleStatePanel" data-state="idle">
+          <div class="panel-heading compact">
+            <div><p class="panel-code">EXPERIMENTAL MUSCLE COACH</p><h3>肌肉状态与评分</h3></div>
+            <span class="state-label" id="muscleModelConfidence">置信度 0%</span>
+          </div>
+          <div class="muscle-state-grid">
+            <div class="muscle-state-main">
+              <span id="muscleStateNumber">--</span>
+              <div><small>当前状态</small><strong id="muscleStateLabel">等待基线</strong></div>
+            </div>
+            <div><small>即时肌肉负荷</small><strong><span id="muscleScore">--</span><em>/100</em></strong></div>
+            <div><small>实验累计 MSS</small><strong id="muscleStressScore">0.0</strong></div>
+            <div><small>恢复提示</small><strong id="recoveryGuidance">等待有效数据</strong></div>
+          </div>
+          <p class="muscle-method" id="muscleMethod">
+            独立实验模型：结合 HbDiff 去氧幅度、ΔtHb 压迫特征、1.5 秒变化斜率、个人会话范围与持续时间；不是 Train.Red 专有算法，也不用于医疗判断。
+          </p>
+        </article>
+
+        <article class="panel signal-panel">
+          <div class="panel-heading compact">
+            <div><p class="panel-code">FOUR OPTICAL CHANNELS</p><h3>实时光学值</h3></div>
+            <span class="state-label" id="linkState">无光路</span>
+          </div>
+          <div class="signal-table">
+            <div><span><i class="dot red"></i>光源短距 RED</span><b id="sourceRed">--</b></div>
+            <div><span><i class="dot ir"></i>光源短距 IR</span><b id="sourceIr">--</b></div>
+            <div><span><i class="dot red hollow"></i>接收长距 RED</span><b id="detectorRed">--</b></div>
+            <div><span><i class="dot ir hollow"></i>接收长距 IR</span><b id="detectorIr">--</b></div>
+          </div>
+        </article>
+
+        <article class="panel record-panel">
+          <div class="panel-heading compact">
+            <div><p class="panel-code">SESSION DATA</p><h3>实验记录</h3></div>
+            <span class="record-time" id="recordTime">00:00</span>
+          </div>
+          <p id="recordCount">尚未记录数据</p>
+          <div class="record-actions">
+            <button class="button dark" id="recordButton" type="button" disabled>开始记录</button>
+            <button class="button ghost" id="exportButton" type="button" disabled>导出 CSV</button>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        <span id="deviceDetail">DUAL MAX30102 · WAITING</span>
+        <span>RELATIVE TREND ONLY · PROTOCOL V2</span>
+      </footer>
+    </main>
+    <script type="module" src="./app.js?v=8"></script>
+  </body>
+</html>
