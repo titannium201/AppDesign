@@ -1,15 +1,10 @@
 /**
- * 用户 DTO（骨架）
+ * 用户 DTO
+ *
+ * 兼容入口：实际实现位于 users/users.dto.ts。
  */
-
-export class CreateProfileDto {
-  userId!: string;
-  nickname?: string;
-  birthday?: string;
-  gender?: 'male' | 'female' | 'other' | 'prefer_not_to_say';
-  heightCm?: number;
-  weightKg?: number;
-  exerciseFrequency?: 'sedentary' | 'light' | 'moderate' | 'active' | 'athlete';
-  primarySports?: string[];
-  injuryHistory?: string[];
-}
+export {
+  RegisterDto,
+  LoginDto,
+  UpdateProfileDto,
+} from './users.dto';

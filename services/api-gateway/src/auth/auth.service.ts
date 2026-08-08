@@ -1,27 +1,35 @@
-import { Injectable } from '@nestjs/common';
-import type { LoginDto, RegisterDto, RefreshTokenDto } from './dto';
-import type { AuthTokens } from '@app/shared';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+import * as bcrypt from 'bcryptjs';
+import { UserAccount } from '@app/shared';
 
-/**
- * 认证服务接口（M1）
- */
-export interface AuthService {
-  register(dto: RegisterDto): Promise<{ userId: string }>;
-  login(dto: LoginDto): Promise<AuthTokens>;
-  refresh(dto: RefreshTokenDto): Promise<AuthTokens>;
+export interface JwtPayload {
+  sub: string;
+  email: string;
 }
 
 @Injectable()
-export class AuthServiceImpl implements AuthService {
-  async register(_dto: RegisterDto): Promise<{ userId: string }> {
-    throw new Error('register not implemented');
+export class AuthService {
+  constructor(private readonly jwtService: JwtService) {}
+
+  hashPassword(password: string): string {
+    return bcrypt.hashSync(password, 10);
   }
 
-  async login(_dto: LoginDto): Promise<AuthTokens> {
-    throw new Error('login not implemented');
+  comparePassword(password: string, hash: string): boolean {
+    return bcrypt.compareSync(password, hash);
   }
 
-  async refresh(_dto: RefreshTokenDto): Promise<AuthTokens> {
-    throw new Error('refresh not implemented');
+  signToken(user: UserAccount): string {
+    const payload: JwtPayload = { sub: user.id, email: user.email };
+    return this.jwtService.sign(payload);
+  }
+
+  verifyToken(token: string): JwtPayload {
+    try {
+      return this.jwtService.verify<JwtPayload>(token);
+    } catch {
+      throw new UnauthorizedException('Invalid or expired token');
+    }
   }
 }

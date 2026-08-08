@@ -1,20 +1,9 @@
 /**
- * 认证 DTO（骨架）
+ * 认证 DTO
+ *
+ * 邮箱注册/登录由 UsersModule 处理，此处保留兼容导出。
  */
-
-export class RegisterDto {
-  phoneNumber!: string;
-  verificationCode!: string;
-  nickname?: string;
-  password?: string;
-}
-
-export class LoginDto {
-  phoneNumber!: string;
-  password?: string;
-  verificationCode?: string;
-}
-
+export { RegisterDto, LoginDto, UpdateProfileDto } from '../users/users.dto';
 export class RefreshTokenDto {
   refreshToken!: string;
 }
