@@ -65,6 +65,7 @@ export interface MuscleScore {
   sto2?: number;
   hbt?: number;
   tskin?: number;
+  hfr?: number;
   lfr?: number;
   sr?: number;
   frt90?: number;
