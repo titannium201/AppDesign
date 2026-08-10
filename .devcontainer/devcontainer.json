@@ -1,0 +1,49 @@
+{
+  "name": "TI Recovery Dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+
+  "forwardPorts": [3000, 5173, 8081, 19000, 19001, 19002],
+
+  "portsAttributes": {
+    "3000": { "label": "API Gateway", "onAutoForward": "openPreview" },
+    "5173": { "label": "Web 3D Viewer", "onAutoForward": "openPreview" },
+    "8081": { "label": "Expo Metro", "onAutoForward": "notify" },
+    "19000": { "label": "Expo Dev Tools", "onAutoForward": "silent" }
+  },
+
+  "postCreateCommand": {
+    "install": "pnpm install",
+    "build-pkgs": "pnpm --filter @app/shared --filter @app/nirs-sdk --filter @app/recovery-algo build",
+    "build-api": "pnpm --filter @app/api-gateway build"
+  },
+
+  "postStartCommand": {
+    "start-all": "pnpm dev:all"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "Prisma.prisma",
+        "expo.vscode-expo-tools",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        }
+      }
+    }
+  }
+}

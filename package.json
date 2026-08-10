@@ -1,0 +1,32 @@
+{
+  "name": "app-design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "肌肉恢复智能系统 — 统一代码仓库",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web-3d": "turbo run dev --filter=@app/web-3d",
+    "dev:mobile": "turbo run dev --filter=@app/mobile",
+    "dev:mobile-web": "turbo run web --filter=@app/mobile",
+    "dev:api": "turbo run dev --filter=@app/api-gateway",
+    "dev:all": "concurrently -n api,3d,mobile -c green,cyan,magenta \"pnpm dev:api\" \"pnpm dev:web-3d\" \"pnpm dev:mobile\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.4",
+    "turbo": "^2.2.0",
+    "rimraf": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

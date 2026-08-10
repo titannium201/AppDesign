@@ -1,0 +1,48 @@
+.DS_Store
+node_modules/
+dist/
+build/
+.next/
+out/
+.expo/
+.pnpm-store/
+*.log
+.env
+.env.local
+.env.*.local
+
+# Large binary assets (models stay local, not in repo)
+*.glb
+*.gltf
+*.obj
+*.fbx
+*.blend
+*.usdz
+public/models/
+models/
+
+# SQLite / local databases
+dev.db
+*.db
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Compiled artifacts that should never be committed (e.g. from `tsc` without outDir)
+packages/*/src/**/*.js
+packages/*/src/**/*.js.map
+packages/*/src/**/*.d.ts
+packages/*/src/**/*.d.ts.map
+apps/*/src/**/*.js
+apps/*/src/**/*.js.map
+apps/*/src/**/*.d.ts
+apps/*/src/**/*.d.ts.map
+
+# Agent temporary directories
+.agents/
+.claude/
+skills-lock.json
+
+# Local smoke-test / model-path artifacts
+apps/web-3d/dev-smoke*.ps1
+apps/web-3d/model-url.txt
