@@ -1,0 +1,1284 @@
+{
+  "source": "Z-Anatomy via anatomylens",
+  "count": 71,
+  "structures": [
+    {
+      "id": "adductor_minimus",
+      "meshId": "adductor_minimus",
+      "baseName": "(Adductor minimus)",
+      "originalName": "(Adductor minimus).l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0782,
+        0.7645,
+        -0.0004
+      ],
+      "mirroredCenter": [
+        -0.0782,
+        0.7645,
+        -0.0004
+      ]
+    },
+    {
+      "id": "adductor_brevis",
+      "meshId": "adductor_brevis",
+      "baseName": "Adductor brevis",
+      "originalName": "Adductor brevis.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0712,
+        0.7499,
+        0.0097
+      ],
+      "mirroredCenter": [
+        -0.0712,
+        0.7499,
+        0.0097
+      ]
+    },
+    {
+      "id": "adductor_longus",
+      "meshId": "adductor_longus",
+      "baseName": "Adductor longus",
+      "originalName": "Adductor longus.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0574,
+        0.7056,
+        0.0205
+      ],
+      "mirroredCenter": [
+        -0.0574,
+        0.7056,
+        0.0205
+      ]
+    },
+    {
+      "id": "adductor_magnus",
+      "meshId": "adductor_magnus",
+      "baseName": "Adductor magnus",
+      "originalName": "Adductor magnus.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0628,
+        0.6605,
+        -0.0161
+      ],
+      "mirroredCenter": [
+        -0.0628,
+        0.6605,
+        -0.0161
+      ]
+    },
+    {
+      "id": "coccygeus_muscle",
+      "meshId": "coccygeus_muscle",
+      "baseName": "Coccygeus muscle",
+      "originalName": "Coccygeus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0224,
+        0.8643,
+        -0.0678
+      ],
+      "mirroredCenter": [
+        -0.0224,
+        0.8643,
+        -0.0678
+      ]
+    },
+    {
+      "id": "external_anal_sphincter",
+      "meshId": "external_anal_sphincter",
+      "baseName": "External anal sphincter",
+      "originalName": "External anal sphincter.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0047,
+        0.8102,
+        -0.0559
+      ],
+      "mirroredCenter": [
+        -0.0047,
+        0.8102,
+        -0.0559
+      ]
+    },
+    {
+      "id": "gluteus_maximus_muscle",
+      "meshId": "gluteus_maximus_muscle",
+      "baseName": "Gluteus maximus muscle",
+      "originalName": "Gluteus maximus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0777,
+        0.8538,
+        -0.0679
+      ],
+      "mirroredCenter": [
+        -0.0777,
+        0.8538,
+        -0.0679
+      ]
+    },
+    {
+      "id": "gluteus_medius_muscle",
+      "meshId": "gluteus_medius_muscle",
+      "baseName": "Gluteus medius muscle",
+      "originalName": "Gluteus medius muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.1164,
+        0.9179,
+        -0.031
+      ],
+      "mirroredCenter": [
+        -0.1164,
+        0.9179,
+        -0.031
+      ]
+    },
+    {
+      "id": "gluteus_minimus_muscle",
+      "meshId": "gluteus_minimus_muscle",
+      "baseName": "Gluteus minimus muscle",
+      "originalName": "Gluteus minimus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.1194,
+        0.9013,
+        -0.0143
+      ],
+      "mirroredCenter": [
+        -0.1194,
+        0.9013,
+        -0.0143
+      ]
+    },
+    {
+      "id": "iliococcygeus_muscle",
+      "meshId": "iliococcygeus_muscle",
+      "baseName": "Iliococcygeus muscle",
+      "originalName": "Iliococcygeus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0284,
+        0.8441,
+        -0.0441
+      ],
+      "mirroredCenter": [
+        -0.0284,
+        0.8441,
+        -0.0441
+      ]
+    },
+    {
+      "id": "inferior_gemellus_muscle",
+      "meshId": "inferior_gemellus_muscle",
+      "baseName": "Inferior gemellus muscle",
+      "originalName": "Inferior gemellus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0809,
+        0.8435,
+        -0.046
+      ],
+      "mirroredCenter": [
+        -0.0809,
+        0.8435,
+        -0.046
+      ]
+    },
+    {
+      "id": "obturator_externus",
+      "meshId": "obturator_externus",
+      "baseName": "Obturator externus",
+      "originalName": "Obturator externus.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0668,
+        0.832,
+        -0.0114
+      ],
+      "mirroredCenter": [
+        -0.0668,
+        0.832,
+        -0.0114
+      ]
+    },
+    {
+      "id": "obturator_internus",
+      "meshId": "obturator_internus",
+      "baseName": "Obturator internus",
+      "originalName": "Obturator internus.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0488,
+        0.8479,
+        -0.0189
+      ],
+      "mirroredCenter": [
+        -0.0488,
+        0.8479,
+        -0.0189
+      ]
+    },
+    {
+      "id": "obturator_membrane",
+      "meshId": "obturator_membrane",
+      "baseName": "Obturator membrane",
+      "originalName": "Obturator membrane.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0402,
+        0.8344,
+        -0.0027
+      ],
+      "mirroredCenter": [
+        -0.0402,
+        0.8344,
+        -0.0027
+      ]
+    },
+    {
+      "id": "pectineus_muscle",
+      "meshId": "pectineus_muscle",
+      "baseName": "Pectineus muscle",
+      "originalName": "Pectineus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.057,
+        0.8167,
+        0.0321
+      ],
+      "mirroredCenter": [
+        -0.057,
+        0.8167,
+        0.0321
+      ]
+    },
+    {
+      "id": "piriformis_muscle",
+      "meshId": "piriformis_muscle",
+      "baseName": "Piriformis muscle",
+      "originalName": "Piriformis muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0698,
+        0.8873,
+        -0.0453
+      ],
+      "mirroredCenter": [
+        -0.0698,
+        0.8873,
+        -0.0453
+      ]
+    },
+    {
+      "id": "pubo_analis_muscle",
+      "meshId": "pubo_analis_muscle",
+      "baseName": "Pubo-analis muscle",
+      "originalName": "Pubo-analis muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0164,
+        0.8259,
+        -0.0232
+      ],
+      "mirroredCenter": [
+        -0.0164,
+        0.8259,
+        -0.0232
+      ]
+    },
+    {
+      "id": "pubococcygeus_muscle",
+      "meshId": "pubococcygeus_muscle",
+      "baseName": "Pubococcygeus muscle",
+      "originalName": "Pubococcygeus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0166,
+        0.8353,
+        -0.0344
+      ],
+      "mirroredCenter": [
+        -0.0166,
+        0.8353,
+        -0.0344
+      ]
+    },
+    {
+      "id": "quadratus_femoris_muscle",
+      "meshId": "quadratus_femoris_muscle",
+      "baseName": "Quadratus femoris muscle",
+      "originalName": "Quadratus femoris muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0912,
+        0.8149,
+        -0.0336
+      ],
+      "mirroredCenter": [
+        -0.0912,
+        0.8149,
+        -0.0336
+      ]
+    },
+    {
+      "id": "superior_gemellus_muscle",
+      "meshId": "superior_gemellus_muscle",
+      "baseName": "Superior gemellus muscle",
+      "originalName": "Superior gemellus muscle.l",
+      "region": "pelvis",
+      "bilateral": true,
+      "center": [
+        0.0775,
+        0.8612,
+        -0.039
+      ],
+      "mirroredCenter": [
+        -0.0775,
+        0.8612,
+        -0.039
+      ]
+    },
+    {
+      "id": "bursa_of_piriformis_muscle",
+      "meshId": "bursa_of_piriformis_muscle",
+      "baseName": "Bursa of piriformis muscle",
+      "originalName": "Bursa of piriformis muscle.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1235,
+        0.8574,
+        -0.0169
+      ],
+      "mirroredCenter": [
+        -0.1235,
+        0.8574,
+        -0.0169
+      ]
+    },
+    {
+      "id": "intermuscular_gluteal_bursae",
+      "meshId": "intermuscular_gluteal_bursae",
+      "baseName": "Intermuscular gluteal bursae",
+      "originalName": "Intermuscular gluteal bursae.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1041,
+        0.7651,
+        -0.0337
+      ],
+      "mirroredCenter": [
+        -0.1041,
+        0.7651,
+        -0.0337
+      ]
+    },
+    {
+      "id": "sciatic_bursa_of_gluteus_maximus_muscle",
+      "meshId": "sciatic_bursa_of_gluteus_maximus_muscle",
+      "baseName": "Sciatic bursa of gluteus maximus muscle",
+      "originalName": "Sciatic bursa of gluteus maximus muscle.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.0597,
+        0.813,
+        -0.0497
+      ],
+      "mirroredCenter": [
+        -0.0597,
+        0.813,
+        -0.0497
+      ]
+    },
+    {
+      "id": "trochanteric_bursa_of_gluteus_maximus_muscle",
+      "meshId": "trochanteric_bursa_of_gluteus_maximus_muscle",
+      "baseName": "Trochanteric bursa of gluteus maximus muscle",
+      "originalName": "Trochanteric bursa of gluteus maximus muscle.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1317,
+        0.8332,
+        -0.043
+      ],
+      "mirroredCenter": [
+        -0.1317,
+        0.8332,
+        -0.043
+      ]
+    },
+    {
+      "id": "trochanteric_bursa_of_gluteus_medius_muscle",
+      "meshId": "trochanteric_bursa_of_gluteus_medius_muscle",
+      "baseName": "Trochanteric bursa of gluteus medius muscle",
+      "originalName": "Trochanteric bursa of gluteus medius muscle.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1391,
+        0.8474,
+        -0.0278
+      ],
+      "mirroredCenter": [
+        -0.1391,
+        0.8474,
+        -0.0278
+      ]
+    },
+    {
+      "id": "trochanteric_bursa_of_gluteus_minimus_muscle",
+      "meshId": "trochanteric_bursa_of_gluteus_minimus_muscle",
+      "baseName": "Trochanteric bursa of gluteus minimus muscle",
+      "originalName": "Trochanteric bursa of gluteus minimus muscle.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1427,
+        0.8476,
+        -0.0165
+      ],
+      "mirroredCenter": [
+        -0.1427,
+        0.8476,
+        -0.0165
+      ]
+    },
+    {
+      "id": "zona_orbicularis",
+      "meshId": "zona_orbicularis",
+      "baseName": "Zona orbicularis",
+      "originalName": "Zona orbicularis.l",
+      "region": "hip_gluteal",
+      "bilateral": true,
+      "center": [
+        0.1082,
+        0.8351,
+        -0.0073
+      ],
+      "mirroredCenter": [
+        -0.1082,
+        0.8351,
+        -0.0073
+      ]
+    },
+    {
+      "id": "gracilis_muscle",
+      "meshId": "gracilis_muscle",
+      "baseName": "Gracilis muscle",
+      "originalName": "Gracilis muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.026,
+        0.6338,
+        -0.0049
+      ],
+      "mirroredCenter": [
+        -0.026,
+        0.6338,
+        -0.0049
+      ]
+    },
+    {
+      "id": "inferior_subtendinous_bursa_of_biceps_femoris_muscle",
+      "meshId": "inferior_subtendinous_bursa_of_biceps_femoris_muscle",
+      "baseName": "Inferior subtendinous bursa of biceps femoris muscle",
+      "originalName": "Inferior subtendinous bursa of biceps femoris muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.12,
+        0.4065,
+        -0.0478
+      ],
+      "mirroredCenter": [
+        -0.12,
+        0.4065,
+        -0.0478
+      ]
+    },
+    {
+      "id": "long_head_of_biceps_femoris",
+      "meshId": "long_head_of_biceps_femoris",
+      "baseName": "Long head of biceps femoris",
+      "originalName": "Long head of biceps femoris.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0952,
+        0.6121,
+        -0.0483
+      ],
+      "mirroredCenter": [
+        -0.0952,
+        0.6121,
+        -0.0483
+      ]
+    },
+    {
+      "id": "rectus_femoris_muscle",
+      "meshId": "rectus_femoris_muscle",
+      "baseName": "Rectus femoris muscle",
+      "originalName": "Rectus femoris muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.1039,
+        0.6562,
+        0.0237
+      ],
+      "mirroredCenter": [
+        -0.1039,
+        0.6562,
+        0.0237
+      ]
+    },
+    {
+      "id": "sartorius_muscle",
+      "meshId": "sartorius_muscle",
+      "baseName": "Sartorius muscle",
+      "originalName": "Sartorius muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0633,
+        0.6502,
+        0.0195
+      ],
+      "mirroredCenter": [
+        -0.0633,
+        0.6502,
+        0.0195
+      ]
+    },
+    {
+      "id": "semimembranosus_muscle",
+      "meshId": "semimembranosus_muscle",
+      "baseName": "Semimembranosus muscle",
+      "originalName": "Semimembranosus muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.045,
+        0.5789,
+        -0.0427
+      ],
+      "mirroredCenter": [
+        -0.045,
+        0.5789,
+        -0.0427
+      ]
+    },
+    {
+      "id": "semitendinosus_muscle",
+      "meshId": "semitendinosus_muscle",
+      "baseName": "Semitendinosus muscle",
+      "originalName": "Semitendinosus muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0502,
+        0.6074,
+        -0.0526
+      ],
+      "mirroredCenter": [
+        -0.0502,
+        0.6074,
+        -0.0526
+      ]
+    },
+    {
+      "id": "short_head_of_biceps_femoris",
+      "meshId": "short_head_of_biceps_femoris",
+      "baseName": "Short head of biceps femoris",
+      "originalName": "Short head of biceps femoris.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.1067,
+        0.5322,
+        -0.0353
+      ],
+      "mirroredCenter": [
+        -0.1067,
+        0.5322,
+        -0.0353
+      ]
+    },
+    {
+      "id": "subtendinous_bursa_of_sartorius_muscle",
+      "meshId": "subtendinous_bursa_of_sartorius_muscle",
+      "baseName": "Subtendinous bursa of sartorius muscle",
+      "originalName": "Subtendinous bursa of sartorius muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0651,
+        0.3795,
+        -0.0101
+      ],
+      "mirroredCenter": [
+        -0.0651,
+        0.3795,
+        -0.0101
+      ]
+    },
+    {
+      "id": "superior_bursa_of_biceps_femoris_muscle",
+      "meshId": "superior_bursa_of_biceps_femoris_muscle",
+      "baseName": "Superior bursa of biceps femoris muscle",
+      "originalName": "Superior bursa of biceps femoris muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0642,
+        0.7988,
+        -0.0474
+      ],
+      "mirroredCenter": [
+        -0.0642,
+        0.7988,
+        -0.0474
+      ]
+    },
+    {
+      "id": "vastus_intermedius_muscle",
+      "meshId": "vastus_intermedius_muscle",
+      "baseName": "Vastus intermedius muscle",
+      "originalName": "Vastus intermedius muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.1043,
+        0.5935,
+        0.0127
+      ],
+      "mirroredCenter": [
+        -0.1043,
+        0.5935,
+        0.0127
+      ]
+    },
+    {
+      "id": "vastus_lateralis_muscle",
+      "meshId": "vastus_lateralis_muscle",
+      "baseName": "Vastus lateralis muscle",
+      "originalName": "Vastus lateralis muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.1248,
+        0.6057,
+        0.0038
+      ],
+      "mirroredCenter": [
+        -0.1248,
+        0.6057,
+        0.0038
+      ]
+    },
+    {
+      "id": "vastus_medialis_muscle",
+      "meshId": "vastus_medialis_muscle",
+      "baseName": "Vastus medialis muscle",
+      "originalName": "Vastus medialis muscle.l",
+      "region": "thigh",
+      "bilateral": true,
+      "center": [
+        0.0699,
+        0.5798,
+        0.0165
+      ],
+      "mirroredCenter": [
+        -0.0699,
+        0.5798,
+        0.0165
+      ]
+    },
+    {
+      "id": "extensor_digitorum_longus",
+      "meshId": "extensor_digitorum_longus",
+      "baseName": "Extensor digitorum longus",
+      "originalName": "Extensor digitorum longus.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1078,
+        0.2698,
+        -0.0296
+      ],
+      "mirroredCenter": [
+        -0.1078,
+        0.2698,
+        -0.0296
+      ]
+    },
+    {
+      "id": "fibularis_brevis_muscle",
+      "meshId": "fibularis_brevis_muscle",
+      "baseName": "Fibularis brevis muscle",
+      "originalName": "Fibularis brevis muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1048,
+        0.1349,
+        -0.049
+      ],
+      "mirroredCenter": [
+        -0.1048,
+        0.1349,
+        -0.049
+      ]
+    },
+    {
+      "id": "fibularis_longus_muscle",
+      "meshId": "fibularis_longus_muscle",
+      "baseName": "Fibularis longus muscle",
+      "originalName": "Fibularis longus muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1124,
+        0.2159,
+        -0.0399
+      ],
+      "mirroredCenter": [
+        -0.1124,
+        0.2159,
+        -0.0399
+      ]
+    },
+    {
+      "id": "fibularis_tertius_muscle",
+      "meshId": "fibularis_tertius_muscle",
+      "baseName": "Fibularis tertius muscle",
+      "originalName": "Fibularis tertius muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1046,
+        0.0865,
+        -0.0159
+      ],
+      "mirroredCenter": [
+        -0.1046,
+        0.0865,
+        -0.0159
+      ]
+    },
+    {
+      "id": "flexor_digitorum_longus",
+      "meshId": "flexor_digitorum_longus",
+      "baseName": "Flexor digitorum longus",
+      "originalName": "Flexor digitorum longus.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0821,
+        0.1063,
+        -0.0044
+      ],
+      "mirroredCenter": [
+        -0.0821,
+        0.1063,
+        -0.0044
+      ]
+    },
+    {
+      "id": "lateral_head_of_gastrocnemius",
+      "meshId": "lateral_head_of_gastrocnemius",
+      "baseName": "Lateral head of gastrocnemius",
+      "originalName": "Lateral head of gastrocnemius.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1058,
+        0.3663,
+        -0.0744
+      ],
+      "mirroredCenter": [
+        -0.1058,
+        0.3663,
+        -0.0744
+      ]
+    },
+    {
+      "id": "lateral_subtendinous_bursa_of_gastrocnemius_muscle",
+      "meshId": "lateral_subtendinous_bursa_of_gastrocnemius_muscle",
+      "baseName": "Lateral subtendinous bursa of gastrocnemius muscle",
+      "originalName": "Lateral subtendinous bursa of gastrocnemius muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.1059,
+        0.4756,
+        -0.0393
+      ],
+      "mirroredCenter": [
+        -0.1059,
+        0.4756,
+        -0.0393
+      ]
+    },
+    {
+      "id": "medial_head_of_gastrocnemius",
+      "meshId": "medial_head_of_gastrocnemius",
+      "baseName": "Medial head of gastrocnemius",
+      "originalName": "Medial head of gastrocnemius.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0601,
+        0.3717,
+        -0.0636
+      ],
+      "mirroredCenter": [
+        -0.0601,
+        0.3717,
+        -0.0636
+      ]
+    },
+    {
+      "id": "medial_subtendinous_bursa_of_gastrocnemius_muscle",
+      "meshId": "medial_subtendinous_bursa_of_gastrocnemius_muscle",
+      "baseName": "Medial subtendinous bursa of gastrocnemius muscle",
+      "originalName": "Medial subtendinous bursa of gastrocnemius muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0611,
+        0.4876,
+        -0.031
+      ],
+      "mirroredCenter": [
+        -0.0611,
+        0.4876,
+        -0.031
+      ]
+    },
+    {
+      "id": "popliteus_muscle",
+      "meshId": "popliteus_muscle",
+      "baseName": "Popliteus muscle",
+      "originalName": "Popliteus muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0866,
+        0.4023,
+        -0.0494
+      ],
+      "mirroredCenter": [
+        -0.0866,
+        0.4023,
+        -0.0494
+      ]
+    },
+    {
+      "id": "soleus_muscle",
+      "meshId": "soleus_muscle",
+      "baseName": "Soleus muscle",
+      "originalName": "Soleus muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0861,
+        0.2843,
+        -0.0581
+      ],
+      "mirroredCenter": [
+        -0.0861,
+        0.2843,
+        -0.0581
+      ]
+    },
+    {
+      "id": "tibialis_anterior_muscle",
+      "meshId": "tibialis_anterior_muscle",
+      "baseName": "Tibialis anterior muscle",
+      "originalName": "Tibialis anterior muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0909,
+        0.2286,
+        -0.0086
+      ],
+      "mirroredCenter": [
+        -0.0909,
+        0.2286,
+        -0.0086
+      ]
+    },
+    {
+      "id": "tibialis_posterior_muscle",
+      "meshId": "tibialis_posterior_muscle",
+      "baseName": "Tibialis posterior muscle",
+      "originalName": "Tibialis posterior muscle.l",
+      "region": "leg",
+      "bilateral": true,
+      "center": [
+        0.0771,
+        0.1557,
+        -0.0245
+      ],
+      "mirroredCenter": [
+        -0.0771,
+        0.1557,
+        -0.0245
+      ]
+    },
+    {
+      "id": "opponens_digiti_minimi_muscle_of_foot",
+      "meshId": "opponens_digiti_minimi_muscle_of_foot",
+      "baseName": "(Opponens digiti minimi muscle of foot)",
+      "originalName": "(Opponens digiti minimi muscle of foot).l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.118,
+        0.0217,
+        0.015
+      ],
+      "mirroredCenter": [
+        -0.118,
+        0.0217,
+        0.015
+      ]
+    },
+    {
+      "id": "abductor_digiti_minimi_of_foot",
+      "meshId": "abductor_digiti_minimi_of_foot",
+      "baseName": "Abductor digiti minimi of foot",
+      "originalName": "Abductor digiti minimi of foot.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.1055,
+        0.0191,
+        -0.0144
+      ],
+      "mirroredCenter": [
+        -0.1055,
+        0.0191,
+        -0.0144
+      ]
+    },
+    {
+      "id": "abductor_hallucis",
+      "meshId": "abductor_hallucis",
+      "baseName": "Abductor hallucis",
+      "originalName": "Abductor hallucis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0626,
+        0.0283,
+        0.0092
+      ],
+      "mirroredCenter": [
+        -0.0626,
+        0.0283,
+        0.0092
+      ]
+    },
+    {
+      "id": "dorsal_interossei_muscles_of_foot",
+      "meshId": "dorsal_interossei_muscles_of_foot",
+      "baseName": "Dorsal interossei muscles of foot",
+      "originalName": "Dorsal interossei muscles of foot.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.103,
+        0.0366,
+        0.0499
+      ],
+      "mirroredCenter": [
+        -0.103,
+        0.0366,
+        0.0499
+      ]
+    },
+    {
+      "id": "extensor_digitorum_brevis",
+      "meshId": "extensor_digitorum_brevis",
+      "baseName": "Extensor digitorum brevis",
+      "originalName": "Extensor digitorum brevis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.1047,
+        0.0484,
+        0.0267
+      ],
+      "mirroredCenter": [
+        -0.1047,
+        0.0484,
+        0.0267
+      ]
+    },
+    {
+      "id": "extensor_hallucis_brevis",
+      "meshId": "extensor_hallucis_brevis",
+      "baseName": "Extensor hallucis brevis",
+      "originalName": "Extensor hallucis brevis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0852,
+        0.0538,
+        0.0257
+      ],
+      "mirroredCenter": [
+        -0.0852,
+        0.0538,
+        0.0257
+      ]
+    },
+    {
+      "id": "extensor_hallucis_longus",
+      "meshId": "extensor_hallucis_longus",
+      "baseName": "Extensor hallucis longus",
+      "originalName": "Extensor hallucis longus.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0928,
+        0.1623,
+        -0.015
+      ],
+      "mirroredCenter": [
+        -0.0928,
+        0.1623,
+        -0.015
+      ]
+    },
+    {
+      "id": "flexor_digiti_minimi_of_foot",
+      "meshId": "flexor_digiti_minimi_of_foot",
+      "baseName": "Flexor digiti minimi of foot",
+      "originalName": "Flexor digiti minimi of foot.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.122,
+        0.0167,
+        0.0292
+      ],
+      "mirroredCenter": [
+        -0.122,
+        0.0167,
+        0.0292
+      ]
+    },
+    {
+      "id": "flexor_digitorum_brevis",
+      "meshId": "flexor_digitorum_brevis",
+      "baseName": "Flexor digitorum brevis",
+      "originalName": "Flexor digitorum brevis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.099,
+        0.0139,
+        0.0372
+      ],
+      "mirroredCenter": [
+        -0.099,
+        0.0139,
+        0.0372
+      ]
+    },
+    {
+      "id": "flexor_hallucis_longus",
+      "meshId": "flexor_hallucis_longus",
+      "baseName": "Flexor hallucis longus",
+      "originalName": "Flexor hallucis longus.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0856,
+        0.1412,
+        -0.0285
+      ],
+      "mirroredCenter": [
+        -0.0856,
+        0.1412,
+        -0.0285
+      ]
+    },
+    {
+      "id": "lateral_head_of_flexor_hallucis_brevis",
+      "meshId": "lateral_head_of_flexor_hallucis_brevis",
+      "baseName": "Lateral head of flexor hallucis brevis",
+      "originalName": "Lateral head of flexor hallucis brevis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0722,
+        0.0285,
+        0.0377
+      ],
+      "mirroredCenter": [
+        -0.0722,
+        0.0285,
+        0.0377
+      ]
+    },
+    {
+      "id": "lumbrical_muscles_of_foot",
+      "meshId": "lumbrical_muscles_of_foot",
+      "baseName": "Lumbrical muscles of foot",
+      "originalName": "Lumbrical muscles of foot.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0797,
+        0.0232,
+        0.0367
+      ],
+      "mirroredCenter": [
+        -0.0797,
+        0.0232,
+        0.0367
+      ]
+    },
+    {
+      "id": "medial_head_of_flexor_hallucis_brevis",
+      "meshId": "medial_head_of_flexor_hallucis_brevis",
+      "baseName": "Medial head of flexor hallucis brevis",
+      "originalName": "Medial head of flexor hallucis brevis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0648,
+        0.0278,
+        0.0494
+      ],
+      "mirroredCenter": [
+        -0.0648,
+        0.0278,
+        0.0494
+      ]
+    },
+    {
+      "id": "oblique_head_of_adductor_hallucis",
+      "meshId": "oblique_head_of_adductor_hallucis",
+      "baseName": "Oblique head of adductor hallucis",
+      "originalName": "Oblique head of adductor hallucis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0912,
+        0.0324,
+        0.0286
+      ],
+      "mirroredCenter": [
+        -0.0912,
+        0.0324,
+        0.0286
+      ]
+    },
+    {
+      "id": "plantar_interossei_muscles",
+      "meshId": "plantar_interossei_muscles",
+      "baseName": "Plantar interossei muscles",
+      "originalName": "Plantar interossei muscles.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.1083,
+        0.0279,
+        0.0485
+      ],
+      "mirroredCenter": [
+        -0.1083,
+        0.0279,
+        0.0485
+      ]
+    },
+    {
+      "id": "plantaris_muscle",
+      "meshId": "plantaris_muscle",
+      "baseName": "Plantaris muscle",
+      "originalName": "Plantaris muscle.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0768,
+        0.3106,
+        -0.0625
+      ],
+      "mirroredCenter": [
+        -0.0768,
+        0.3106,
+        -0.0625
+      ]
+    },
+    {
+      "id": "quadratus_plantae_muscle",
+      "meshId": "quadratus_plantae_muscle",
+      "baseName": "Quadratus plantae muscle",
+      "originalName": "Quadratus plantae muscle.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.0856,
+        0.025,
+        -0.0226
+      ],
+      "mirroredCenter": [
+        -0.0856,
+        0.025,
+        -0.0226
+      ]
+    },
+    {
+      "id": "transverse_head_of_adductor_hallucis",
+      "meshId": "transverse_head_of_adductor_hallucis",
+      "baseName": "Transverse head of adductor hallucis",
+      "originalName": "Transverse head of adductor hallucis.l",
+      "region": "foot",
+      "bilateral": true,
+      "center": [
+        0.1027,
+        0.0178,
+        0.0635
+      ],
+      "mirroredCenter": [
+        -0.1027,
+        0.0178,
+        0.0635
+      ]
+    }
+  ]
+}
