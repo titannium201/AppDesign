@@ -1,0 +1,26 @@
+{
+  "name": "@app/muscle-3d",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@app/shared": "file:../shared",
+    "three": "^0.169.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "@react-three/fiber": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
