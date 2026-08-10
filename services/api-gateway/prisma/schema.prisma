@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id                String   @id @default(uuid())
+  email             String   @unique
+  passwordHash      String
+  name              String?
+  nickname          String?
+  gender            String?
+  age               Int?
+  heightCm          Int?
+  weightKg          Int?
+  sportType         String?
+  weeklyMileageKm   Int?
+  trainingTypes     String?  // JSON string
+  intervalConfig    String?  // JSON string
+  bestRace          String?  // JSON string
+  targetEvent       String?  // JSON string
+  injuryHistory     String?  // JSON string
+  currentDiscomfort String?
+  sleepQuality      String?
+  runningExperience String?
+  watchBrands       String?  // JSON string
+  sport             String?
+  trainingLevel     String?
+  goal              String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  devices Device[]
+  scans   Scan[]
+}
+
+model Device {
+  id           String   @id @default(uuid())
+  userId       String
+  name         String
+  macAddress   String   @unique
+  firmwareVer  String?
+  batteryLevel Int?
+  connected    Boolean  @default(false)
+  lastSeenAt   DateTime @default(now())
+  createdAt    DateTime @default(now())
+
+  user  User   @relation(fields: [userId], references: [id])
+  scans Scan[]
+}
+
+model Scan {
+  id           String   @id @default(uuid())
+  userId       String
+  deviceId     String?
+  type         String   // baseline | post_sport
+  status       String   // pending | running | completed | failed
+  startedAt    DateTime @default(now())
+  completedAt  DateTime?
+  overallScore Int?
+  advice       String?
+
+  user      User        @relation(fields: [userId], references: [id])
+  device    Device?     @relation(fields: [deviceId], references: [id])
+  muscles   MuscleScore[]
+}
+
+model MuscleScore {
+  id        String @id @default(uuid())
+  scanId    String
+  muscleId  String
+  meshId    String
+  region    String
+  crs       Int
+  ors       Int
+  mrs       Int
+  trs       Int
+  label     String
+  advice    String?
+
+  scan Scan @relation(fields: [scanId], references: [id], onDelete: Cascade)
+
+  @@unique([scanId, muscleId])
+}

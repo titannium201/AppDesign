@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "paths": {
+      "@app/shared": ["../../packages/shared/dist"],
+      "@app/recovery-algo": ["../../packages/recovery-algo/dist"],
+      "@app/nirs-sdk": ["../../packages/nirs-sdk/dist"]
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "isolatedModules": false,
+    "composite": false,
+    "declarationMap": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
